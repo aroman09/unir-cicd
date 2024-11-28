@@ -35,7 +35,7 @@ test-e2e:
 	docker cp $(PROJECT_DIR)/test/e2e/cypress.json e2e-tests:/cypress.json
 	docker cp $(PROJECT_DIR)/test/e2e/cypress e2e-tests:/cypress
 	docker start -a e2e-tests
-	docker cp e2e-tests:/results/. ./results
+	docker cp e2e-tests:/results ./results
 	docker rm --force apiserver
 	docker rm --force calc-web
 	docker rm --force e2e-tests
